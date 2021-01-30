@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>IA-TEL</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="mainDiv">
+
+        <h1 class="mainTitle">Diseño de Red</h1>
+
+        <div class="flexRow">
+            <h3 class="nameLabel">Nombre de Red</h3>
+            <input id="inputName" type="text" />
+        </div>
+
+        <br />
+        <br />
+
+        <div class="flexRow">
+            <h3 class="routersLabel">Routers</h3>
+            <button id="addButton" class="buttonStyle">Agregar Routers</button>
+        </div>
+
+        <br />
+        <br />
+
+        <table id="routersTable" cellspacing="0" cellpadding="5">
+            <tr>
+                <th>Tipo</th>
+                <th>Cantidad</th>
+                <th>Eliminar</th>
+            </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <button class="buttonStyle mainButton" onclick="doGenerate();">Generar Redes</button>
+
+        <br />
+        <br />
+
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Agregar Routers</h2>
+            </div>
+            <div class="modal-body">
+                <br />
+                <div class="inputRow">
+                    Tipo:
+                    <select id="modalRouterType" class="modalSelect">
+                        <option value="1841">1841</option>
+                        <option value="2620XM">2620XM</option>
+                        <option value="2621XM">2621XM</option>
+                        <option value="2811">2811</option>
+                        <option value="Generic">Generic</option>
+                    </select>
+                </div>
+                <br />
+                <div class="inputRow">
+                    Cantidad:
+                    <input id="modalNumberOfRouters" class="modalNumeric" type="number" value="0" />
+                </div>
+                <br />
+                <button class="buttonStyle modalButton" onclick="doAgregar();">Agregar</button>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="Script.js"></script>
